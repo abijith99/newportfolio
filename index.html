@@ -1,83 +1,75 @@
-<!doctype html>
-</div>
-</div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratheba F - UI/UX Designer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1 class="logo">Pratheba F</h1>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <h2>UI/UX Designer</h2>
+      <p>Strategic Innovator, Self-motivated</p>
+    </section>
+  </header>
 
+  <!-- Experience & Skills -->
+  <section class="skills">
+    <h2>Expertise</h2>
+    <p>Over 3 years of experience in Web & App Design</p>
+    <ul>
+      <li>Product Design</li>
+      <li>UX Research</li>
+      <li>UI Design</li>
+      <li>Branding & Animations</li>
+    </ul>
+    <p><strong>Tools:</strong> Figma, Framer, Webflow</p>
+  </section>
 
-<section id="contact-form" class="contact-form-section">
-<h2 class="section-title">Contact Me</h2>
-<p class="section-subtitle">Have a project or question? Reach out.</p>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>My Latest Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">Beat Licensing Platform – Iktaraa</div>
+      <div class="project-card">Customer Focus Cleaning App</div>
+      <div class="project-card">Interior Design – Namasvi</div>
+      <div class="project-card">Meta Steel Buildings</div>
+    </div>
+  </section>
 
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am passionate about blending design with business analysis to deliver
+      solutions that are both aesthetically pleasing and strategically aligned.
+      I aim to exceed expectations by transforming bold ideas into exceptional
+      digital experiences.
+    </p>
+  </section>
 
-<form id="myForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeGwTvoB8Qb1Rg_soqfptwMMjGBen2zqggJGZ5-ktytWcMxjg/formResponse" method="POST" target="hidden_iframe">
-<div class="form-group">
-<label for="formName">Name</label>
-<input id="formName" type="text" name="entry.873794987" placeholder="Your Name" required />
-</div>
-<div class="form-group">
-<label for="designation">Device model / Your Topic</label>
-<input type="text" id="designation" name="entry.213792244" placeholder="e.g., iPhone 13, Project Inquiry" required />
-</div>
-<div class="form-group">
-<label for="feedback">Message</label>
-<textarea id="feedback" name="entry.816559233" placeholder="Share your message here..." rows="5" required></textarea>
-</div>
-<button type="submit" id="submitButton">Submit</button>
-<p id="formLoading" style="display:none;text-align:center;margin-top:12px;color:var(--muted)">Submitting...</p>
-</form>
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="formSubmitted()"></iframe>
-</section>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:prathifrancis@gmail.com">prathifrancis@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com" target="_blank">View Profile</a></p>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Infinity • Built with ♥</p>
+  </footer>
 
-<section id="connect" class="connect-section">
-<h2 class="section-title">Connect With Me</h2>
-<p style="color:var(--muted)">Follow my journey or reach out through my social channels.</p>
-<div class="social-links" style="margin-top:12px">
-<a href="https://www.linkedin.com/in/abijiths1" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-<a href="https://dribbble.com/abijiths" target="_blank" rel="noopener" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
-<a href="mailto:abijith.s@yahoo.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-</div>
-</section>
-
-
-</main>
-
-
-<footer>
-<p>© <span id="currentYear"></span> - Abijith S. All Rights Reserved.</p>
-</footer>
-
-
-<script>
-// small helpers: menu toggle, animate on scroll, form submit handler
-function toggleMenu(){
-const nav = document.querySelector('.nav-links');
-if(nav.style.display === 'flex') nav.style.display = 'none';
-else nav.style.display = 'flex';
-}
-
-
-// reveal on scroll
-const observer = new IntersectionObserver((entries)=>{
-entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('inview') } });
-},{threshold:0.12});
-document.querySelectorAll('.animate-on-scroll').forEach(el=>observer.observe(el));
-
-
-// year
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-
-// form submit UX
-const form = document.getElementById('myForm');
-const loading = document.getElementById('formLoading');
-function formSubmitted(){
-// triggered when iframe loads after submit
-loading.style.display = 'none';
-alert('Thanks — your message was received.');
-form.reset();
-}
-form.addEventListener('submit',()=>{ loading.style.display='block'; });
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
